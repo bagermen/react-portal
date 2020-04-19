@@ -1,0 +1,99 @@
+@import "../less/reset.less";
+
+/* CSS Reset based on http://necolas.github.io/normalize.css/ */
+
+.panel{
+  padding: 10px;
+  background-color: #1e313d;
+
+  &.panel-shaded {
+    background-color: #1e313d;   
+    > .panel-footer {
+      border-color: @border-color;
+      background-color: transparent;
+    }
+  }
+
+  &.panel-default{
+    border-color: @border-color;
+    border:none;
+   -webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
+    > .panel-heading,
+    > .panel-footer {
+      border-color: @border-color;
+      background-color: transparent;
+      border:none;
+      color: #b0b0b0;
+      font-size: 12px;
+      padding: 15px 10px 0px 10px;
+      font-weight: 700;
+
+      > hr {
+            margin:5px 10px 5px 0px;
+      }
+
+      > .panel-footer {
+        padding: 10px;
+
+      }
+
+    }
+  }
+  .list-group-item{
+    border-color: lighten(@border-color, 3%);
+  }
+  border-radius: @panel-border-radius;
+  &.no-borders{
+    border-width: 0;
+    .panel-heading,
+    .panel-footer{
+      border-width: 0;
+    }
+  }
+  .table{
+
+    > tbody {
+      > tr {
+        &:first-child {
+          > td {
+            border-top:none !important;
+          }
+        }
+      }
+    }
+
+    td,
+    th {
+      padding:6px 15px;
+      border-top: none;
+
+
+    }
+    thead > tr > th{
+      border-bottom: 1px solid #2b363e;
+    }
+  }
+  .table-striped{
+    > tbody {
+      > tr{
+        &:nth-child(odd){
+          > td,
+          > th{
+            background-color: #1e2e38;
+          }
+        }
+      }
+    }
+    > thead {
+      th{
+        background: #1e323e;
+        border-right: none;
+        &:last-child{
+          border-right: none
+        }
+      }
+    }
+  }
+}

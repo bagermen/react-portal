@@ -1,0 +1,19 @@
+.ui-control-panel(
+  @header-text-size: 1.25rem;
+  @header-text-weight: bold;
+  @background-color: transparent;
+  @text-color: inherit;
+) {
+  .ui-control-panel {
+    padding: 7px;
+    border-radius: 5px;
+    background-color: @background-color;
+    color: @text-color;
+
+    &>header {
+      font-size: @header-text-size;
+      font-weight: @header-text-weight;
+      margin: 10px 5px;
+    }
+  }
+}

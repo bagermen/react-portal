@@ -1,0 +1,49 @@
+.dashboard-charts-wrapper (
+  @chart-header-text-color: grey;
+  @chart-header-text-size: 1.2rem;
+) {
+  .dashboard-charts-wrapper {
+    display: flex;
+    flex-direction: column;
+    &>* {
+      flex: 1;
+      align-items: stretch;
+    }
+
+    &>header {
+      flex: none;
+      height: auto;
+      font-size: @chart-header-text-size;
+      color: @chart-header-text-color;
+      align-items: center;
+      text-align: center;
+      line-height: 2;
+    }
+  }
+ 
+}
+
+.dashboard-charts-style(
+  @label-color: white;
+  @axis-color: grey;
+  @middle-axis-color: grey;
+  @no-data-text-color: white;
+) {
+  .dashboard-charts-style {
+    .nvd3 text {
+      fill: @label-color !important;
+    }
+
+    .nvd3.nv-noData {
+      fill: @no-data-text-color !important;
+    }
+
+    .nvd3 .nv-axis line {
+      stroke: @middle-axis-color;
+    }
+
+    .nvd3 .nv-axis path {
+      stroke: @axis-color;
+    }
+  }
+}

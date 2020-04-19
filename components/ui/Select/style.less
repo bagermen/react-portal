@@ -1,0 +1,80 @@
+.react-select(
+  @text-color: #e1e1e1;
+  @border-color: #333647;
+  @menu-border-color: #cccccc;
+  @menu-background-color: #293a47;
+  @menu-hover-color: lighten(#293a47, 15%)
+) {
+  .react-select-container {
+    .react-select__menu,
+    .react-select__control--menu-is-open {
+      box-shadow: none;
+      background-color: @menu-background-color !important;
+      color: @text-color !important;
+      border-width: 1px;
+      border-style: solid;
+      border-color: @menu-border-color;
+      border-radius:0;
+      margin-top:0;
+      padding-top:0;
+      padding-bottom:0;
+    }
+
+    .react-select__control {
+      &:extend(.react-select-container .react-select__menu);
+      border-color: @border-color !important;
+    }
+
+    .react-select__indicator-separator {
+      background-color:transparent;
+    }
+
+    .react-select__placeholder {
+      background-color: @menu-background-color !important;
+      color: @text-color !important;
+    }
+
+    .react-select__input {
+      background-color: @menu-background-color !important;
+      color: @text-color !important;
+    }
+
+    .react-select__single-value {
+      &:extend(.react-select-container .react-select__input);
+    }
+
+    .react-select__value-container {
+      &:extend(.react-select-container .react-select__input);
+    }
+
+    .react-select__option--is-focused {
+      background-color: @menu-hover-color !important;
+    }
+
+    .react-select__option--is-selected {
+      background-color: lighten(@menu-hover-color, 15%) !important;
+    }
+
+    .react-select--is-disabled .react-select__control--is-disabled {
+      background-color: transparent !important;
+      border-color: transparent !important;
+
+      .react-select__indicators {
+        display: none !important;
+      }
+
+      .react-select__value-container--has-value {
+        background-color: transparent !important;
+        padding-left: 0px;
+
+        .react-select__input {
+          background-color: transparent !important;
+        }
+
+        .react-select__single-value--is-disabled {
+          &:extend(.react-select-container .react-select__input);
+        }
+      }
+    }
+  }
+}

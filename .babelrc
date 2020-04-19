@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "@babel/preset-flow",
+    "@babel/preset-react",
+    ["@babel/preset-env", {"modules": "commonjs"}]
+  ],
+  "plugins": [
+    "lodash",
+    "react-hot-loader/babel",
+    "add-module-exports",
+    ["@babel/plugin-proposal-class-properties", { "loose": false }]
+  ]
+}

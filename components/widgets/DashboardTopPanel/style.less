@@ -1,0 +1,41 @@
+.dashboard-top-panel(
+  @top-font-size: ceil(1.25*1rem);
+  @top-font-weight: bold;
+  @top-font-color: inherit;
+  @bottom-font-size: ceil(0.85*1rem);
+  @bottom-font-color: inherit;
+  @top-font-weight: bold;
+) {
+  .dashboard-top-panel {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) auto;
+    grid-template-rows: 2fr 1fr;
+    grid-auto-flow: column;
+    grid-row-gap: 5px;
+    padding: 7px;
+    border-radius: 5px;
+
+    &>div {
+      justify-self: center;
+    }
+
+    &>div:nth-child(odd):not(:last-child) {
+      font-size: @top-font-size;
+      font-weight: bold;
+    }
+
+    &>div:nth-child(even) {
+      font-size: @bottom-font-size;
+      color: @bottom-font-color;
+    }
+
+    &>div:last-child {
+      grid-column: 7 / 8;
+      grid-row: 1 / span 2;
+      align-self: center;
+      min-width: 240px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

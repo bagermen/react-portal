@@ -1,0 +1,4 @@
+{
+    "backend": "http://api-dev.vidtizer.com:8080",
+    "dataserver": "https://data-dev.vidtizer.com:8083"
+}

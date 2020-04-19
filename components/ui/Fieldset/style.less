@@ -1,0 +1,31 @@
+.ui-fieldset-panel(
+  @header-text-size: 0.75rem;
+  @header-text-weight: bold;
+  @background-color: transparent;
+  @border-color: grey;
+  @border-width: 1px;
+  @border-style: solid;
+  @text-color: inherit;
+) {
+  .ui-fieldset-panel {
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: @border-color;
+    border-width: @border-width;
+    border-style: @border-style;
+    background-color: @background-color;
+    color: @text-color;
+
+    &>header {
+      font-size: @header-text-size;
+      font-weight: @header-text-weight;
+      top: -@header-text-size/1.4;
+      left: 15px;
+      background-color: @background-color;
+      position: absolute;
+      color: @border-color;
+      padding: 0 5px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import "../less/nav.less";
+
+/* Bootstrap Nav overrides for custom framework*/
+
+.subheader {
+	background-color: #253139;
+	box-shadow: none;
+	h3 {
+		color:#ffffff;
+	}
+}
+
+.brand-header {
+	padding: 36px 20px;
+	background-color: #253139;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #202b34;
+}
+
+.nav-primary {	
+	.bg-light & {
+	}
+	li {
+		line-height: 1.5;
+		> a > i{
+			margin: floor(-(@nav-primary-height - 20px)/2) -15px;
+			line-height: @nav-primary-height;
+			width: @nav-primary-height;
+			float: left;
+			margin-right: 0px;
+			font-size: 14px;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+			&:before{
+				position: relative;
+				z-index: 2;
+			}
+			> b{
+				position: absolute;
+				left: -@nav-primary-height + 2px;
+				width: 100%;
+				top: 0;
+				bottom: 0;
+				z-index: 0;
+				.transition(left .25s);
+			}
+
+		}
+	}
+	ul.nav {
+		> li {
+			> a{
+				padding:floor((@nav-primary-height - 22px)/2) 15px floor((@nav-primary-height - 22px)/2) 5px;
+				position: relative;
+				font-weight: bold;
+				font-size: 14px;
+				color:#889aa9;
+				transition:color .3s ease-in-out 0s;
+				.no-borders & {
+					border-width: 0 !important;
+				}
+				> .badge{
+					font-size: 11px;
+					padding: 3px 6px;
+					margin-top: 2px;
+					position: absolute;
+    				right: 8px;
+				}
+				.bg-light & {
+					color: @text-color !important;
+					border-color: darken(@brand-light, 2%);					
+					> i{
+						color: lighten(@text-color, 20%);
+						border-right: 1px solid darken(@brand-light, 2%);
+					}
+				}
+				&.active{
+					.text{
+						display: none;
+					}
+					.text-active{
+						display: inline-block !important;
+					}
+				}
+			}
+			&:hover > a,
+			&:focus > a,
+			> a:hover,
+			> a:focus,
+			> a:active,
+			&.active > a {
+				color: #fff;
+				background-color: inherit;
+				background-color: #1e202c !important;
+				text-shadow: none;
+				> i.icon{
+					color: #ff9a28;
+				}
+				> i > b{
+					left: 0 !important;
+				}
+			}
+			li a{
+				font-weight: normal;
+				text-transform: none;
+				font-size: @font-size-base;
+			}
+			&.active{
+				> ul{
+					display: block;
+				}
+			}
+		}
+		ul{
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,222 @@
+@import "../less/react-admin.less";
+
+/* react app specifics */
+
+html {
+  background-color: @body-bg;
+  font-size: @font-size-base;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: @font-size-base;
+  color: @text-color;
+  background-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+hr {
+  border-top:1px solid #1e313d;
+}
+
+.list-group-item {
+  background-color: transparent;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #f1f1f1;
+  cursor: not-allowed;
+  background-color: #1e313d;
+  border-color: #1e313d;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.428571429;
+  text-decoration: none;
+  background-color: #1e313d;
+  border: 1px solid #1e313d;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: lighten(#1e313d, .30);
+}
+
+.text-300 {
+  font-weight: 300;
+    color:#717171;
+}
+
+.form-control {
+  background-color: @form-control-bg;
+  border-color: @form-control-border-color;
+  color: @form-control-color;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: @form-control-bg;
+}
+
+.progress {
+      background-color: #293946;
+}
+
+.summaryItem {
+  text-align: center;
+  color: #fff;
+  @media (min-width: 768px) {
+  }
+
+}
+
+.chat-item img {
+    border : solid 3px #1e313d;
+}
+
+.chat-item .backbar {
+        position: absolute;
+    height: 56px;
+    width: 1px;
+    background-color: #1e313d;
+    top: 48px;
+    left: 23px;
+}
+
+
+.fullEditorWrap {
+  padding: 10px;
+  background-color: @form-control-bg;
+    color:#f1f1f1;
+    border-radius: 5px;
+  font-size: 14px;
+}
+
+.note-editor {
+  position: relative;
+    width: 90%;
+    text-align: left;
+    padding: 30px;
+    margin: 0px auto;
+    min-height: 500px;
+    cursor: text;
+    font-size: 20px;
+    background-color: #1e313d;
+    color:#f1f1f1;
+    border-radius: 5px;
+}
+
+#content {
+    background-color:transparent;
+}
+
+
+.content-left {
+    vertical-align: top;
+    padding: 0px 20px 10px 20px;
+    margin-right: 0px;
+    width: 100%;
+    float: left;
+    // margin-left: -150%;
+}
+
+
+
+.mail-folder {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+  border-right: 2px solid #2c373e;
+  margin-bottom: 20px;
+  
+  li {
+    display: inline-block;
+    line-height: 45px;
+    width: 100%;
+    padding-left: 10px;
+
+    a {
+      color: #6a6a6a;
+      line-height: 45px;
+      width: 100%;
+      display: inline-block;
+      padding: 0 20px 0 0;
+      // border-right: 2px solid #f5f5f5;
+    }
+    &.active {
+
+      background-color: #25313a;
+
+      a {
+        color: #f1f1f1;
+        border-right: 2px solid #a48ad4;
+      }
+    }
+  }
+}
+
+.mail-item {
+  padding:20px;
+  border-bottom: solid 0.9px #2c373e;
+  margin-right: 30px;
+
+  cursor: pointer;
+
+  .subject {
+    font-size: 12px;
+  }
+
+  &.active {
+    border-radius: 10px;
+    background-color: #25313a;
+  }
+
+  .body {
+    float: left;
+    line-height: 16px;
+    font-size: 12px;
+  }
+}
+
+.docsContainer {
+  background-color: #25313a;
+}
+// Fieldset
+.ui-fieldset-panel(
+  @header-text-size: @font-size-base;
+  @border-color: @text-muted;
+  @text-color: @text-color;
+  @background-color: @brand-black;
+);
+
+
+// react-select
+.react-select(
+  @text-color: #e1e1e1;
+  @border-color: @form-control-border-color;
+  @menu-border-color: lighten(@form-control-bg, 15%);
+  @menu-background-color: @form-control-bg;
+  @menu-hover-color: lighten(@form-control-bg, 15%)
+);
+
+// Control Panel
+.ui-control-panel(
+  @background-color: @brand-black;
+  @text-color: #e1e1e1;
+);
+
+// User Dashboard
+.user-dashboard();
